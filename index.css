@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(205, 232, 255);
+}
+
+.form{
+    width: 40vw;
+    height: 56vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title{
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 4vh;
+    font-family: 'Dancing Script', cursive;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.username, .password{
+    color: rgb(72, 72, 72);
+    font-size: 3vh;
+    margin-bottom: 0vh;
+    font-family: 'Young Serif', serif;
+}
+
+#uname, #pname{
+    border: none;
+    height: 30px;
+    width: 30vw;
+    padding: 5px;
+    font-size: 16px;
+    outline: none;
+    border-bottom: 2px solid gray;
+    margin-bottom: 3.5vh;
+}
+
+.error {
+    border-bottom: 2px solid red;
+}
+
+#submit, #reset{
+    height: 36px;
+    width: 100px;
+    border-radius: 18px;
+    border: 1px solid gray;
+    font-size: 16px;
+    margin-top: 1vh;
+}
+
+#submit{
+    margin-right: 20px;
+}
+
+#submit:hover, #reset:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background-color: rgb(192, 192, 192);
+}
+
+.login{
+    margin-top: 2.4vh;
+    font-size: 2.3vh;
+}
+
+.anchor{
+    text-decoration: none;
+    color: rgb(21, 21, 255);
+}
+
+@media screen and (min-width : 0px) and (max-width: 500px){
+    .form{
+        width: 66vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 42vw;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width : 500px) and (max-width: 600px){
+    .form{
+        width: 68vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 44vw;
+    }
+    #submit{
+        margin-right: 4px;
+    }
+}
+
+@media screen and (min-width : 600px) and (max-width: 650px){
+    .form{
+        width: 56vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 40vw;
+    }
+    #submit{
+        margin-right: 4px;
+    }
+}
+
+@media screen and (min-width : 650px) and (max-width: 800px){
+    .form{
+        width: 46vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 30vw;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width : 800px) and (max-width: 1000px){
+    .form{
+        width: 40vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 28vw;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width : 1000px) and (max-width: 1200px){
+    .form{
+        width: 34vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 24vw;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (min-width : 1200px) and (max-width: 1400px){
+    .form{
+        width: 30vw;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 21vw;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width : 1400px){
+    .form{
+        width: 380px;
+        height: 56vh;
+    }
+    #uname, #pname{
+        width: 250px;
+    }
+    #submit{
+        margin-right: 10px;
+    }
+}

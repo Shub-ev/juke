@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juke</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=EB+Garamond:ital@1&family=Fuggles&family=Young+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="enter">
+        <div class="form">
+            <form action="" id="login-form" onsubmit="submitForm(event)">
+                <p class="title">Juke</p>
+                <div class="info">
+                    <p class="username">Username</p>
+                    <input type="text" id="uname">
+                    <p class="password">Password</p>
+                    <input type="password" id="pname">
+                    <div class="buttons">
+                        <button id="submit" type="submit">Submit</button>
+                        <button id="reset" type="reset" onclick="clear_form(event)">Reset</button>
+                    </div>
+                    <p class="login">have account then <a class="anchor" href="">login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const clear_form = (event) => {
+            document.getElementById('uname').value = '';
+            document.getElementById('pname').value = '';
+
+            document.getElementById('uname').classList.remove('error');
+            document.getElementById('pname').classList.remove('error');
+
+            const in_name = document.getElementById('uname');
+            const in_pass = document.getElementById('pname');
+
+            in_name.style.borderBottom = '2px solid gray';
+            in_pass.style.borderBottom = '2px solid gray';
+        }
+    
+        const submitForm = (event) => {
+            event.preventDefault();
+            const uname = document.getElementById('uname').value;
+            const pname = document.getElementById('pname').value;
+            const in_name = document.getElementById('uname');
+            const in_pass = document.getElementById('pname');
+            in_name.style.borderBottom = '2px solid gray';
+            in_pass.style.borderBottom = '2px solid gray';
+            if(uname === '' && pname ===''){
+                in_name.style.borderBottom = '3px solid red';
+                in_pass.style.borderBottom = '3px solid red';
+            }
+            if(uname === ''){
+                in_name.style.borderBottom = '3px solid red';
+            }
+            if(pname === ''){
+                in_pass.style.borderBottom = '3px solid red';
+            }
+            else{
+                clear_form();
+                alert("Login Successful.")
+            }
+        }
+    </script>
+</body>
+</html>
